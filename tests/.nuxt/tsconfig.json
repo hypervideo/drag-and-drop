@@ -12,13 +12,13 @@
         "../../node_modules/.pnpm/nitropack@2.11.9_@netlify+blobs@8.2.0/node_modules/nitropack"
       ],
       "defu": [
-        "../../node_modules/.pnpm/defu@6.1.4/node_modules/defu"
+        "../../node_modules/defu"
       ],
       "h3": [
         "../../node_modules/.pnpm/h3@1.15.1/node_modules/h3"
       ],
       "consola": [
-        "../../node_modules/.pnpm/consola@3.4.2/node_modules/consola"
+        "../../node_modules/consola"
       ],
       "ofetch": [
         "../../node_modules/.pnpm/ofetch@1.4.1/node_modules/ofetch"
@@ -105,7 +105,7 @@
         "./imports"
       ],
       "#app-manifest": [
-        "./manifest/meta/dev"
+        "./manifest/meta/0d26202b-080c-408c-9b88-c9c99e6ff081"
       ],
       "#components": [
         "./components"

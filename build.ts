@@ -83,6 +83,15 @@ const __dirname = dirname(__filename);
   };
   delete packageJson.devDependencies;
   delete packageJson.private;
+  packageJson.main = packageJson.main.replace("dist/", "");
+  packageJson.types = packageJson.types.replace("dist/", "");
+  for (const key of ["./vue", "./react", "./solid", "."]) {
+    packageJson.exports[key].require.types = packageJson.exports[key].require.types.replace("dist/", "");
+    packageJson.exports[key].require.default = packageJson.exports[key].require.default.replace("dist/", "");
+    packageJson.exports[key].import.types = packageJson.exports[key].import.types.replace("dist/", "");
+    packageJson.exports[key].import.default = packageJson.exports[key].import.default.replace("dist/", "");
+  }
+
   const updatedFile = JSON.stringify(packageJson, null, 2);
   await writeFile(
     resolve(__dirname, `./dist/package.json`),
